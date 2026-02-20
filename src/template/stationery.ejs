@@ -1,0 +1,103 @@
+<%- include('../partials/header', { title: 'Stationery' }) %>
+
+    <div class="container p-4">
+        <div class="row mb-5">
+            <div class="col col-md-12">
+                <h1 class="text-start" data-translate="stationery">Papelaria</h1>
+                <p class="text-start" data-translate="stationery_description">A papelaria institucional é exemplificada
+                    abaixo. Devido aos numerosos fornecedores, muitos itens podem não ter as mesmas medidas. Isso
+                    exigirá ajustes nos arquivos finais. Enquanto os padrões exibidos aqui forem respeitados, não haverá
+                    problemas com pequenas diferenças métricas.</p>
+                <div class="d-flex d-sm-table btn-group-vertical" role="group">
+                    <a href="assets/stationery.zip?v=<%= version %>" target="_blank">
+                        <button class="btn btn-outline-primary" type="button">
+                            <i class="bi bi-link-45deg"></i><span data-translate="stationery_files">Arquivos de
+                                papelaria</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-12">
+                <picture>
+                    <img class="rounded img-fluid" src="assets/files/stationery/stationery.webp?v=<%= version %>" alt="Stationery Mockup"
+                        data-translate="stationery_mockup_alt">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <div class="row row-cols-lg-2 p-4">
+            <div class="col-md-12 p-3">
+                <h2 class="text-start" data-translate="business_card_front">Frente do cartão de visita</h2>
+                <picture>
+                    <img class="img-fluid shadow" src="assets/files/stationery/business-card-front.webp?v=<%= version %>"
+                        alt="Business Card Front" data-translate="business_card_front_alt">
+                </picture>
+            </div>
+            <div class="col-md-12 p-3">
+                <h2 class="text-start" data-translate="business_card_back">Verso do cartão de visita</h2>
+                <picture>
+                    <img class="img-fluid shadow" src="assets/files/stationery/business-card-back.webp?v=<%= version %>"
+                        alt="Business Card Back" data-translate="business_card_back_alt">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <div class="row row-cols-lg-2">
+            <div class="col-md-12 p-3">
+                <h2 class="text-start" data-translate="envelope_letterhead_front">Envelope Ofício (DL) Frente</h2>
+                <picture>
+                    <img class="img-fluid shadow" src="assets/files/stationery/envelope-dl-front.webp?v=<%= version %>"
+                        alt="Envelope DL Front" data-translate="envelope_letterhead_front_alt">
+                </picture>
+            </div>
+            <div class="col-md-12 p-3">
+                <h2 class="text-start" data-translate="envelope_letter_back">Envelope Ofício (DL) Verso</h2>
+                <picture>
+                    <img class="img-fluid shadow" src="assets/files/stationery/envelope-dl-back.webp?v=<%= version %>"
+                        alt="Envelope DL Back" data-translate="envelope_letter_back_alt">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <div class="row row-cols-lg-2">
+            <div class="col-md-12 p-3">
+                <h2 class="text-start" data-translate="stamping">Papel Timbrado (A4)</h2>
+                <picture>
+                    <img class="img-fluid shadow" src="assets/files/stationery/letterhead.webp?v=<%= version %>" alt="Letterhead"
+                        data-translate="stamping_alt">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <div class="row row-cols-lg-2">
+            <div class="col-md-12 p-3">
+                <h2 class="text-start" data-translate="envelope_vertical_front">Envelope Saco (C4) Frente</h2>
+                <picture>
+                    <img class="img-fluid shadow" src="assets/files/stationery/envelope-c4-front.webp?v=<%= version %>"
+                        alt="Envelope C4 Front" data-translate="envelope_vertical_front_alt">
+                </picture>
+            </div>
+            <div class="col-md-12 p-3">
+                <h2 class="text-start" data-translate="envelope_vertical_back">Envelope Saco (C4) Verso</h2>
+                <picture>
+                    <img class="img-fluid shadow" src="assets/files/stationery/envelope-c4-back.webp?v=<%= version %>"
+                        alt="Envelope C4 Back" data-translate="envelope_vertical_back_alt">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

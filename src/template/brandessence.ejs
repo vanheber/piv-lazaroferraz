@@ -1,0 +1,1193 @@
+<%- include('../partials/header', { title: 'Brand Essence' }) %>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-start" data-translate="brand_essence">Essência da marca</h1>
+                <h2 class="text-start" data-translate="creative_concept">Conceito criativo</h2>
+                <picture>
+                    <img class="rounded img-fluid" src="assets/img/concept.webp?v=<%= version %>" alt=""
+                        data-translate="creative_concepts_alt">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5" id="defense">
+        <div class="row gy-4 p-3 gy-md-0">
+            <div
+                class="col-md-6 d-flex d-sm-flex d-md-flex justify-content-start align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                <div class="mw-350">
+                    <h3 class="text-start" data-translate="defense_of_concept">Defesa do conceito</h3>
+                    <p class="text-start my-3" data-translate="concept_defense_text">
+                        <%= brandEssence.conceptDefense.text %>
+                    </p>
+                    <h4 class="my-3">FORÇAS</h4>
+                    <ul>
+                        <% brandEssence.conceptDefense.strengths.forEach(function(strength) { %>
+                            <li>
+                                <%= strength %>
+                            </li>
+                            <% }); %>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center bg-white rounded">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="img-fluid object-fit-contain mh-300"
+                        src="assets/files/vertical/lg-vt-color.webp?v=<%= version %>" alt=""
+                        data-translate="vertical_logo_alt">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5 d-flex flex-column" id="archetype">
+        <div class="row">
+            <div class="col-12 px-xl-5">
+                <h2 class="mx-xl-5" data-translate="brand_archetype">arquétipo da marca</h2>
+            </div>
+        </div>
+
+        <!-- Archetypes Logic -->
+        <!-- Generated from GitHub Source -->
+        
+        <!-- Adaptável -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'adaptavel' ? 'order-1' : (brandEssence.archetypes.secondary === 'adaptavel' ? 'order-2' : 'order-3 d-none') %>"
+            id="adaptavel">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'adaptavel' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/adaptable.webp" alt="Adaptável Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'adaptavel') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'adaptavel') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Adaptável</h3>
+                    <p class="mb-2">O Adaptável se transforma e se reinventa para superar desafios.🦎</p><p>Sua marca é sinônimo de <strong>flexibilidade, versatilidade e resiliência</strong>. Busca se adaptar às mudanças do mercado e oferecer <strong>soluções inovadoras</strong> para as necessidades dos clientes.💡</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Resiliência</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Flexibilidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Versatilidade</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Inconsistência</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Desconfiança</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Imprevisibilidade</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Amante -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'amante' ? 'order-1' : (brandEssence.archetypes.secondary === 'amante' ? 'order-2' : 'order-3 d-none') %>"
+            id="amante">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'amante' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/lover.webp" alt="Amante Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'amante') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'amante') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Amante</h3>
+                    <p class="mb-2">O Amante busca a conexão emocional e a intimidade. ❤</p><p>Sua marca é sinônimo de paixão, romance e sensualidade. Deseja criar experiências prazerosas e memoráveis para seus clientes, oferecendo produtos ou serviços que despertam os sentidos e celebram a beleza da vida. 🔥</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Romance</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Sensualidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Ternura</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Luxúria</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Traição</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Impertinência</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arquiteto -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'arquiteto' ? 'order-1' : (brandEssence.archetypes.secondary === 'arquiteto' ? 'order-2' : 'order-3 d-none') %>"
+            id="arquiteto">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'arquiteto' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/architect.webp" alt="Arquiteto Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'arquiteto') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'arquiteto') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Arquiteto</h3>
+                    <p class="mb-2">O Arquiteto é o mestre da estratégia e da organização. 📐</p><p>Sua marca é sinônimo de <strong>planejamento, precisão e eficiência</strong>. Busca criar soluções sólidas e duradouras, oferecendo produtos ou serviços que ajudam as pessoas a construir seus sonhos e alcançar seus objetivos com segurança. 🏗</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Planejamento</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Precisão</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Metodologia</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Lentidão</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Obsolecência</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Preciosismo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audacioso -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'audacioso' ? 'order-1' : (brandEssence.archetypes.secondary === 'audacioso' ? 'order-2' : 'order-3 d-none') %>"
+            id="audacioso">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'audacioso' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/audacious.webp" alt="Audacioso Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'audacioso') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'audacioso') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Audacioso</h3>
+                    <p class="mb-2">O Audacioso não tem medo de desafios e busca constantemente a <strong>inovação</strong>. 🚀</p><p>Sua marca é sinônimo de <strong>coragem, determinação e pioneirismo</strong>. Inspira as pessoas a saírem da zona de conforto e a buscarem seus sonhos com paixão e ousadia.</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Ousadia</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Inovação</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Persistência</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Impetuosidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Impulsividade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Irresponsabilidade</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Boêmio -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'boemio' ? 'order-1' : (brandEssence.archetypes.secondary === 'boemio' ? 'order-2' : 'order-3 d-none') %>"
+            id="boemio">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'boemio' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/bohemian.webp" alt="Boêmio Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'boemio') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'boemio') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Boêmio</h3>
+                    <p class="mb-2">O Boêmio celebra a vida com alegria e espontaneidade. 🎉</p><p>Sua marca é sinônimo de <strong>diversão, liberdade e prazer</strong>. Busca proporcionar experiências memoráveis e autênticas para seus clientes, oferecendo produtos ou serviços que estimulam a criatividade, a conexão humana e a celebração da vida. 🍻</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Entretenimento</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Prazer</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Socialização</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Libertinagem</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Irresponsabilidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Imprudência</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conservador -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'conservador' ? 'order-1' : (brandEssence.archetypes.secondary === 'conservador' ? 'order-2' : 'order-3 d-none') %>"
+            id="conservador">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'conservador' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/conservative.webp" alt="Conservador Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'conservador') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'conservador') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Conservador</h3>
+                    <p class="mb-2">O Conservador valoriza a <strong>tradição, a segurança e a estabilidade</strong>. 🏰</p><p>Sua marca inspira <strong>confiança </strong>e <strong>credibilidade</strong>, transmitindo a mensagem de que seus produtos ou serviços são testados e aprovados pelo tempo. Preza pela <strong>qualidade </strong>e pelo <strong>respeito aos valores</strong> estabelecidos. 🤝</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Estabilidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Segurança</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Tradição</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Retrocesso</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Inércia</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Obsolescência</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Criador -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'criador' ? 'order-1' : (brandEssence.archetypes.secondary === 'criador' ? 'order-2' : 'order-3 d-none') %>"
+            id="criador">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'criador' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/creator.webp" alt="Criador Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'criador') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'criador') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Criador</h3>
+                    <p class="mb-2">O Criador é a expressão da <strong>imaginação</strong> e da <strong>originalidade</strong>. 🎨</p><p>Sua marca é sinônimo de <strong>inovação, visão e criatividade</strong>. Busca inspirar e transformar o mundo através de produtos ou serviços que desafiam o convencional e abrem novos horizontes. 🚀</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Visionário</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Inovação</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Persistência</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Loucura</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Dispendioso</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Complicado</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuidador -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'cuidador' ? 'order-1' : (brandEssence.archetypes.secondary === 'cuidador' ? 'order-2' : 'order-3 d-none') %>"
+            id="cuidador">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'cuidador' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/caregiver.webp" alt="Cuidador Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'cuidador') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'cuidador') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Cuidador</h3>
+                    <p class="mb-2">O Cuidador é movido pela <strong>compaixão </strong>e pela preocupação com o bem-estar dos outros.&nbsp;❤</p><p>Sua marca é sinônimo de <strong>empatia, apoio e cuidado</strong>. Busca proteger e nutrir seus clientes, oferecendo produtos ou serviços que promovem a <strong>saúde, o bem-estar e a segurança</strong>. 🤝</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Caridade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Proteção</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Empatia</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Controlador</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Possessivo</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Coletivista</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delicado -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'delicado' ? 'order-1' : (brandEssence.archetypes.secondary === 'delicado' ? 'order-2' : 'order-3 d-none') %>"
+            id="delicado">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'delicado' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/delicate.webp" alt="Delicado Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'delicado') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'delicado') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Delicado</h3>
+                    <p class="mb-2">O Delicado encanta com sua <strong>beleza, sensibilidade e gentileza</strong>.🌸</p><p>Sua marca é sinônimo de <strong>sofisticação, cuidado</strong> e atenção aos detalhes. Busca criar experiências prazerosas e memoráveis, oferecendo produtos ou serviços que proporcionam conforto, bem-estar e beleza. ✨</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Sensibilidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Luxo</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Beleza</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Fraqueza</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Insegurança</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Preguiça</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Engraçado -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'engracado' ? 'order-1' : (brandEssence.archetypes.secondary === 'engracado' ? 'order-2' : 'order-3 d-none') %>"
+            id="engracado">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'engracado' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/funny.webp" alt="Engraçado Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'engracado') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'engracado') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Engraçado</h3>
+                    <p class="mb-2">O Engraçado traz <strong>alegria e diversão</strong> para o mundo. 😄</p><p>Sua marca é sinônimo de <strong>bom humor, criatividade e espontaneidade</strong>. Busca entreter e divertir seus clientes, oferecendo produtos ou serviços que proporcionem momentos de descontração e felicidade. 🎉</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Alegria</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Diversão</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Criatividade</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Irrelevância</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Inoportunidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Irresponsabilidade</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Governante -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'governante' ? 'order-1' : (brandEssence.archetypes.secondary === 'governante' ? 'order-2' : 'order-3 d-none') %>"
+            id="governante">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'governante' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/ruler.webp" alt="Governante Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'governante') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'governante') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Governante</h3>
+                    <p class="mb-2">O Governante inspira confiança e respeito através de sua <strong>liderança e responsabilidade</strong>.👑</p><p>Sua marca é sinônimo de <strong>autoridade, organização e sucesso</strong>. Busca criar ordem e estabilidade, oferecendo produtos ou serviços que ajudam as pessoas a alcançar seus objetivos e realizar seus sonhos. 🏆</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Liderança</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Responsabilidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Experiência</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Autoritarismo</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Opressão</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Orgulho</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Herói -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'heroi' ? 'order-1' : (brandEssence.archetypes.secondary === 'heroi' ? 'order-2' : 'order-3 d-none') %>"
+            id="heroi">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'heroi' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/hero.webp" alt="Herói Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'heroi') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'heroi') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Herói</h3>
+                    <p class="mb-2">O Herói enfrenta desafios com <strong>coragem e determinação</strong>, buscando sempre a <strong>vitória</strong>. 💪</p><p>Sua marca é sinônimo de <strong>força, liderança e superação</strong>. Inspira as pessoas a lutarem por seus objetivos e a nunca desistirem de seus sonhos. 🏆</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Coragem</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Liderança</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Determinação</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Arrogância</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Ferocidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Imprudência</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jogador -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'jogador' ? 'order-1' : (brandEssence.archetypes.secondary === 'jogador' ? 'order-2' : 'order-3 d-none') %>"
+            id="jogador">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'jogador' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/player.webp" alt="Jogador Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'jogador') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'jogador') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Jogador</h3>
+                    <p class="mb-2">O Jogador busca a emoção da competição e a conquista da <strong>vitória</strong>. 🏆</p><p>Sua marca é sinônimo de <strong>desafio, adrenalina e superação</strong>. Oferece produtos ou serviços que estimulam a competitividade, o desenvolvimento de habilidades e a busca pela excelência. 💪</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Competição</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Vitória</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Treinamento</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Arriscado</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Apostador</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Egoísmo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Justo -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'justo' ? 'order-1' : (brandEssence.archetypes.secondary === 'justo' ? 'order-2' : 'order-3 d-none') %>"
+            id="justo">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'justo' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/fair.webp" alt="Justo Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'justo') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'justo') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Justo</h3>
+                    <p class="mb-2">O Justo busca a <strong>equidade e a transparência</strong> em todas as suas ações. ⚖</p><p>Sua marca é sinônimo de <strong>confiança, honestidade e integridade</strong>. Preocupa-se com o bem-estar de todos e luta por um mundo mais justo. 🤝</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Igualdade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Justiça</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Honestidade</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Autoritarismo</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Inflexibilidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Estagnação</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mítico -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'mitico' ? 'order-1' : (brandEssence.archetypes.secondary === 'mitico' ? 'order-2' : 'order-3 d-none') %>"
+            id="mitico">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'mitico' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/mystic.webp" alt="Mítico Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'mitico') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'mitico') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Mítico</h3>
+                    <p class="mb-2">Busca a conexão com o mundo <strong>espiritual </strong>e a compreensão dos <strong>mistérios </strong>da vida. 🔮</p><p>Sua marca é sinônimo de <strong>intuição, magia e transformação</strong>. Oferece produtos ou serviços que ajudam as pessoas a se conectarem com seu eu interior, a encontrarem significado e a explorarem o desconhecido. ✨</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Intrigante</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Misterioso</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Espiritual</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Terror</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Medo</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Incompreensível</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ostentador -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'ostentador' ? 'order-1' : (brandEssence.archetypes.secondary === 'ostentador' ? 'order-2' : 'order-3 d-none') %>"
+            id="ostentador">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'ostentador' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/ostentatious.webp" alt="Ostentador Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'ostentador') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'ostentador') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Ostentador</h3>
+                    <p class="mb-2">O Ostentador busca o melhor em tudo e não tem medo de mostrar.✨</p><p>Sua marca é sinônimo de <strong>luxo, exclusividade e sucesso</strong>. Oferece produtos ou serviços premium, que proporcionam status, prestígio e uma experiência única para seus clientes. 💎</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Luxo</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Riqueza</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Exclusividade</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Arrogância</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Insensibilidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Egoísmo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pontual -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'pontual' ? 'order-1' : (brandEssence.archetypes.secondary === 'pontual' ? 'order-2' : 'order-3 d-none') %>"
+            id="pontual">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'pontual' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/punctual.webp" alt="Pontual Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'pontual') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'pontual') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Pontual</h3>
+                    <p class="mb-2">O Pontual valoriza o compromisso, a <strong>organização e a eficiência</strong>.⏱</p><p>Sua marca é sinônimo de <strong>confiança, pontualidade e resultados</strong>. Entrega seus produtos ou serviços no prazo e com a qualidade prometida, superando as expectativas dos clientes. 🎯</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Organização</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Pontualidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Compromisso</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Burocracia</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Inflexibilidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Rigidez</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Puro -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'puro' ? 'order-1' : (brandEssence.archetypes.secondary === 'puro' ? 'order-2' : 'order-3 d-none') %>"
+            id="puro">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'puro' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/pure.webp" alt="Puro Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'puro') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'puro') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Puro</h3>
+                    <p class="mb-2">O puro vê o mundo com olhos esperançosos e acredita no bem.😇</p><p>Sua marca é sinônimo de <strong>otimismo, simplicidade e pureza</strong>. Busca trazer alegria e esperança para seus clientes, oferecendo produtos ou serviços que promovem a felicidade, a positividade e a conexão com a natureza. 🌻</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Bondade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Lealdade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Confiabilidade</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Ingenuidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Fanatismo</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Utopia</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rebelde -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'rebelde' ? 'order-1' : (brandEssence.archetypes.secondary === 'rebelde' ? 'order-2' : 'order-3 d-none') %>"
+            id="rebelde">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'rebelde' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/rebel.webp" alt="Rebelde Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'rebelde') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'rebelde') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Rebelde</h3>
+                    <p class="mb-2">O Rebelde desafia o status quo e quebra as regras. 🤘</p><p>Sua marca é sinônimo de <strong>ousadia, liberdade e mudança</strong>. Busca inspirar as pessoas a questionarem o mundo ao seu redor e a lutarem por seus ideais. ✊</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Revolucionário</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Audacioso</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Inconformado</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Imprudência</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Impulsividade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Insubordinação</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sábio -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'sabio' ? 'order-1' : (brandEssence.archetypes.secondary === 'sabio' ? 'order-2' : 'order-3 d-none') %>"
+            id="sabio">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'sabio' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/wisdow.webp" alt="Sábio Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'sabio') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'sabio') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Sábio</h3>
+                    <p class="mb-2">O Sábio busca a <strong>verdade e o conhecimento</strong> acima de tudo.🦉</p><p>Sua marca é sinônimo de <strong>inteligência, experiência e expertise</strong>. Compartilha sua sabedoria com o mundo, oferecendo produtos ou serviços que ajudam as pessoas a aprender, crescer e se desenvolver. 🎓</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Conhecimento</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Experiência</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Reflexão</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Arrogância</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Sistemático</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Lentidão</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Simples -->
+        <div class="row gy-4 gy-md-0 py-3 <%= brandEssence.archetypes.primary === 'simples' ? 'order-1' : (brandEssence.archetypes.secondary === 'simples' ? 'order-2' : 'order-3 d-none') %>"
+            id="simples">
+            <div class="col-md-6">
+                <div class="m-xl-5 p-xl-5">
+                    <img class="rounded img-fluid fit-cover min-h-300 <%= brandEssence.archetypes.secondary === 'simples' ? 'w-75 mx-auto d-block' : 'w-100' %>"
+                        src="https://img.agenciaquadri.com.br/cardscolor/naive.webp" alt="Simples Archetype">
+                </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+                <div class="mw-350">
+                    <div class="mb-2">
+                        <% if (brandEssence.archetypes.primary === 'simples') { %>
+                            <span class="badge bg-black text-white p-2">PRIMÁRIO</span>
+                        <% } %>
+                        <% if (brandEssence.archetypes.secondary === 'simples') { %>
+                            <span class="badge bg-secondary text-white p-2">SECUNDÁRIO</span>
+                        <% } %>
+                    </div>
+                    <h3>Simples</h3>
+                    <p class="mb-2">O Simples valoriza a <strong>clareza, a eficiência e a honestidade</strong>. 🌿</p><p>Sua marca é sinônimo de <strong>praticidade, transparência e soluções</strong> diretas. Busca descomplicar a vida dos clientes, oferecendo produtos ou serviços que são fáceis de entender e usar. 🎯</p>
+                    
+                    
+                    <div class="row g-3 mt-4">
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-success rounded-4 h-100 p-3">
+                                <h4 class="mb-2 h6">Termos positivos</h4>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Transparência</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Honestidade</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Naturalidade</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xxl-6">
+                            <div class="text-white bg-danger rounded-4 h-100 p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-2 h6">Termos negativos</h4>
+                                    <span class="badge text-bg-dark">EVITAR</span>
+                                </div>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Simplista</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Irrelevância</li>
+                                    <li class="list-inline-item text-bg-light list-inline-item list-inline-item badge">Comum</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add other archetypes similarly with the d-none logic based on config -->
+
+    </div>
+
+    <%- include('../partials/footer') %>

@@ -1,0 +1,145 @@
+{
+    "_comment": "Template de configuração de marca para PIVdigital. Substitua os valores entre [COLCHETES] com as informações do cliente.",
+    "_instructions": "Este arquivo deve ser preenchido com auxílio do agente GEM do cliente para gerar copywriting alinhado com a identidade da marca.",
+    "brandName": "[NOME DA MARCA]",
+    "theme": {
+        "colors": {
+            "primary": "[HEX_COR_PRIMARIA]",
+            "secondary": "[HEX_COR_SECUNDARIA]",
+            "tertiary": "[HEX_COR_TERCIARIA]",
+            "info": "#90c2e7",
+            "success": "#98c1a9",
+            "warning": "#f4a261",
+            "danger": "#b00020",
+            "light": "#f8f9fa",
+            "dark": "#212529"
+        },
+        "fonts": {
+            "headings": {
+                "name": "[NOME_FONTE_TITULOS]",
+                "url": "[URL_GOOGLE_FONTS_TITULOS]",
+                "family": "'[NOME_FONTE_TITULOS]', sans-serif"
+            },
+            "body": {
+                "name": "[NOME_FONTE_TEXTO]",
+                "url": "[URL_GOOGLE_FONTS_TEXTO]",
+                "family": "'[NOME_FONTE_TEXTO]', serif"
+            }
+        }
+    },
+    "about": {
+        "description": [
+            "[PARÁGRAFO_1_SOBRE_A_MARCA]",
+            "[PARÁGRAFO_2_SOBRE_A_MARCA]"
+        ],
+        "vision": "[VISÃO_DA_MARCA_COM_HTML_SE_NECESSÁRIO]",
+        "mission": "[MISSÃO_DA_MARCA_COM_HTML_SE_NECESSÁRIO]",
+        "values": [
+            "[VALOR_1]",
+            "[VALOR_2]",
+            "[VALOR_3]",
+            "[VALOR_4]",
+            "[VALOR_5]"
+        ],
+        "voiceTone": {
+            "description": "[DESCRIÇÃO_DO_TOM_DE_VOZ]",
+            "points": [
+                "<strong>[CARACTERÍSTICA_1]</strong>: \"[EXEMPLO_1]\"",
+                "<strong>[CARACTERÍSTICA_2]</strong>: \"[EXEMPLO_2]\"",
+                "<strong>[CARACTERÍSTICA_3]</strong>: \"[EXEMPLO_3]\"",
+                "<strong><span class=\"text-danger\">Evitar</span></strong>: [TERMOS_A_EVITAR]"
+            ]
+        }
+    },
+    "colors": {
+        "primary": [
+            {
+                "name": "Cor primária",
+                "class": "bg-primary",
+                "textClass": "text-light",
+                "codes": "C[XX] M[XX] Y[XX] K[XX]<br>#[HEXCODE]<br>Pantone [XXXX] C"
+            },
+            {
+                "name": "Cor secundária",
+                "class": "bg-secondary",
+                "textClass": "text-light",
+                "codes": "C[XX] M[XX] Y[XX] K[XX]<br>#[HEXCODE]<br>Pantone [XXXX] C"
+            }
+        ]
+    },
+    "typography": {
+        "links": [
+            {
+                "text": "Página da fonte título",
+                "url": "[URL_GOOGLE_FONTS_SPECIMEN_TITULO]"
+            },
+            {
+                "text": "Página da fonte texto",
+                "url": "[URL_GOOGLE_FONTS_SPECIMEN_TEXTO]"
+            }
+        ],
+        "headings": {
+            "name": "[NOME_FONTE_TITULOS]",
+            "usage": "Fonte para títulos"
+        },
+        "body": {
+            "name": "[NOME_FONTE_TEXTO]",
+            "usage": "Fonte para texto corrido"
+        }
+    },
+    "brandEssence": {
+        "conceptDefense": {
+            "text": "[DEFESA_DO_CONCEITO_DA_MARCA]",
+            "strengths": [
+                "[FORÇA_1] → [EXPLICAÇÃO]",
+                "[FORÇA_2] → [EXPLICAÇÃO]",
+                "[FORÇA_3] → [EXPLICAÇÃO]",
+                "[FORÇA_4] → [EXPLICAÇÃO]",
+                "[FORÇA_5] → [EXPLICAÇÃO]"
+            ]
+        },
+        "archetypes": {
+            "primary": "[arquétipo_primário_minúsculo]",
+            "secondary": "[arquétipo_secundário_minúsculo]",
+            "tertiary": "[arquétipo_terciário_minúsculo_opcional]"
+        }
+    },
+    "logotype": {
+        "usage": {
+            "safetyArea": {
+                "description": "Nenhum elemento gráfico deve invadir a área de segurança indicada pela linha pontilhada. [DESCRIÇÃO_ESPECÍFICA_DA_ÁREA_DE_SEGURANÇA]"
+            },
+            "reduction": {
+                "horizontal": {
+                    "text": "Tamanho mínimo em [XXX] pixels e [X]cm.",
+                    "size": "[XXX]px"
+                },
+                "symbol": {
+                    "text": "Tamanho mínimo em [XX] pixels e [X]cm.",
+                    "size": "[XX]px"
+                },
+                "vertical": {
+                    "text": "Tamanho mínimo em [XXX] pixels e [X]cm.",
+                    "size": "[XXX]px"
+                }
+            }
+        }
+    },
+    "stationery": {
+        "downloadLink": "[URL_GOOGLE_DRIVE_OU_DROPBOX_PAPELARIA]"
+    },
+    "contact": {
+        "whatsapp": {
+            "number": "[CÓDIGO_PAÍS][DDD][NÚMERO]",
+            "message": "[MENSAGEM_PADRÃO_WHATSAPP]"
+        },
+        "social": {
+            "website": "[URL_SITE]",
+            "linkedin": "[URL_LINKEDIN]",
+            "instagram": "[URL_INSTAGRAM]",
+            "facebook": "[URL_FACEBOOK_OU_VAZIO]",
+            "x": "[URL_X_OU_VAZIO]",
+            "tiktok": "[URL_TIKTOK_OU_VAZIO]"
+        }
+    }
+}

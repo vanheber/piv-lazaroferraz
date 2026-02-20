@@ -1,0 +1,94 @@
+.hero-gradient {
+    background: linear-gradient(var(--bs-primary), var(--bs-secondary));
+}
+
+.hero-parallax {
+    height: 600px;
+    background: var(--bs-tertiary-bg);
+}
+
+/* Custom Utilities for PIV Digital */
+.mw-350 {
+    max-width: 350px;
+}
+
+.mh-300 {
+    max-height: 300px;
+}
+
+.min-h-300 {
+    min-height: 300px;
+}
+
+.w-250 {
+    width: 250px;
+}
+
+.w-30 {
+    width: 30px;
+}
+
+.w-150 {
+    width: 150px;
+}
+
+/* Font Demos */
+.font-heading-demo {
+    font-family: var(--bs-font-sans-serif) !important;
+}
+
+.font-body-demo {
+    font-family: var(--bs-body-font-family) !important;
+}
+
+/* Gradient Demos */
+.bg-gradient-demo-1 {
+    background: linear-gradient(var(--bs-primary), var(--bs-secondary)), var(--bs-primary);
+}
+
+.bg-gradient-demo-2 {
+    background: linear-gradient(var(--bs-secondary), var(--bs-info));
+}
+
+.bg-gradient-demo-3 {
+    background: linear-gradient(var(--bs-secondary), var(--bs-warning));
+}
+
+.bg-gradient-demo-4 {
+    background: linear-gradient(var(--bs-danger), var(--bs-info));
+}
+
+.bg-gradient-demo-5 {
+    background: linear-gradient(var(--bs-danger), var(--bs-primary));
+}
+
+.bg-gradient-demo-6 {
+    background: linear-gradient(var(--bs-danger), var(--bs-warning));
+}
+
+.bg-gradient-demo-7 {
+    background: linear-gradient(var(--bs-success), var(--bs-warning));
+}
+
+.bg-gradient-demo-8 {
+    background: linear-gradient(var(--bs-primary), var(--bs-info));
+}
+
+.bg-gradient-demo-9 {
+    background: linear-gradient(var(--bs-tertiary-color), white);
+}
+
+/* Theme Visibility */
+/* Default (Light Mode) */
+.d-theme-dark {
+    display: none !important;
+}
+
+/* Dark Mode */
+:root[data-bs-theme="dark"] .d-theme-light {
+    display: none !important;
+}
+
+:root[data-bs-theme="dark"] .d-theme-dark {
+    display: inline-block !important;
+}

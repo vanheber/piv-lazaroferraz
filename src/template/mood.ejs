@@ -1,0 +1,105 @@
+<%- include('../partials/header', { title: 'Mood' }) %>
+
+    <div class="container p-4">
+        <div class="row mb-5">
+            <div class="col col-md-12">
+                <h1 class="text-start" data-translate="moodboard">Moodboard</h1>
+                <h2 class="text-start" data-translate="communication_language">Linguagem de Comunicação</h2>
+                <p class="text-start" data-translate="mood_description">Não podemos prever todas as situações, mas
+                    podemos determinar a linguagem visual que o material deve ter para manter a unidade e refletir as
+                    características abordadas na essência da marca.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <div class="row">
+            <!-- Header Image -->
+            <div class="col-md-12 py-2">
+                <h3 data-translate="digital">Digital</h3>
+                <picture>
+                    <img class="rounded img-fluid w-100" src="assets/img/moodheader.webp?v=<%= version %>" alt=""
+                        data-translate="digital_banner_alt">
+                </picture>
+            </div>
+
+            <!-- Site Mockup (Moved to 2nd position) -->
+            <div class="col-md-12 py-2">
+                <picture>
+                    <img class="rounded img-fluid w-100" src="assets/img/moodsite.webp?v=<%= version %>" alt=""
+                        data-translate="digital_banner_alt">
+                </picture>
+            </div>
+
+            <!-- Grid Images -->
+            <div class="col-6 py-2 col-auto">
+                <picture>
+                    <img class="rounded img-fluid" src="assets/img/moodimg01.webp?v=<%= version %>" alt="" data-translate="post_1_alt">
+                </picture>
+            </div>
+            <div class="col-6 py-2 col-auto">
+                <picture>
+                    <img class="rounded img-fluid shadow" src="assets/img/moodimg02.webp?v=<%= version %>" alt=""
+                        data-translate="post_2_alt">
+                </picture>
+            </div>
+            <div class="col-6 py-2 col-auto">
+                <picture>
+                    <img class="rounded img-fluid shadow" src="assets/img/moodimg03.webp?v=<%= version %>" alt=""
+                        data-translate="post_2_alt">
+                </picture>
+            </div>
+            <div class="col-6 py-2 col-auto">
+                <picture>
+                    <img class="rounded img-fluid shadow" src="assets/img/moodimg04.webp?v=<%= version %>" alt=""
+                        data-translate="post_2_alt">
+                </picture>
+            </div>
+            <div class="col-6 py-2 col-auto">
+                <picture>
+                    <img class="rounded img-fluid shadow" src="assets/img/moodimg05.webp?v=<%= version %>" alt=""
+                        data-translate="post_2_alt">
+                </picture>
+            </div>
+            <div class="col-6 py-2 col-auto">
+                <picture>
+                    <img class="rounded img-fluid shadow" src="assets/img/moodimg06.webp?v=<%= version %>" alt=""
+                        data-translate="post_2_alt">
+                </picture>
+            </div>
+            <div class="col-6 py-2 col-auto">
+                <picture>
+                    <img class="rounded img-fluid shadow" src="assets/img/moodimg07.webp?v=<%= version %>" alt=""
+                        data-translate="post_2_alt">
+                </picture>
+            </div>
+            <div class="col-6 py-2 col-auto">
+                <picture>
+                    <img class="rounded img-fluid shadow" src="assets/img/moodimg08.webp?v=<%= version %>" alt=""
+                        data-translate="post_2_alt">
+                </picture>
+            </div>
+            <div class="col-6 py-2 col-auto">
+                <picture>
+                    <img class="rounded img-fluid shadow" src="assets/img/moodimg09.webp?v=<%= version %>" alt=""
+                        data-translate="post_2_alt">
+                </picture>
+            </div>
+            <div class="col-6 py-2 col-auto">
+                <picture>
+                    <img class="rounded img-fluid shadow" src="assets/img/moodimg10.webp?v=<%= version %>" alt=""
+                        data-translate="post_2_alt">
+                </picture>
+            </div>
+
+            <!-- Assinatura (Previously last, kept last in grid but renamed) -->
+            <div class="col-md-12 py-2">
+                <picture>
+                    <img class="rounded img-fluid w-100" src="assets/img/endsign.webp?v=<%= version %>" alt=""
+                        data-translate="digital_banner_alt">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

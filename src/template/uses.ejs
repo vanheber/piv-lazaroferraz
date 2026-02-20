@@ -1,0 +1,51 @@
+<%- include('../partials/header', { title: 'Uses' }) %>
+
+    <div class="container p-4">
+        <div class="row mb-5">
+            <div class="col col-md-12">
+                <h1 class="text-start" data-translate="application">Aplicação</h1>
+                <p class="text-start" data-translate="guidelines">Diretrizes para aplicação da marca em peças gráficas.
+                </p>
+            </div>
+        </div>
+        <div class="row row-cols-xl-3">
+            <div class="col-auto p-3">
+                <h2 data-translate="safety_area">Área de Segurança</h2>
+                <p data-translate="safety_area_description"><%- logotype.usage.safetyArea.description %></p>
+            </div>
+            <div class="col-auto d-flex justify-content-center p-3 rounded bg-white"><img class="img-fluid"
+                    src="assets/img/safearea.webp?v=<%= version %>" alt="" data-translate="safety_area_vertical_alt"></div>
+            <div class="col-auto d-flex justify-content-center p-3 rounded bg-white"><img
+                    class="img-fluid object-fit-contain" src="assets/img/horizontalsafearea.webp?v=<%= version %>" alt=""
+                    data-translate="safety_area_horizontal_alt"></div>
+        </div>
+        <hr>
+        <div class="row row-cols-sm-1 row-cols-md-2">
+            <div class="col-auto p-3">
+                <h2 data-translate="reduction">Redução</h2>
+                <p data-translate="reduction_limit">O limite de redução para o logo será:</p>
+            </div>
+            <div class="col-auto p-3">
+                <div class="p-1 mb-4"><img src="assets/files/horizontal/lg-hz-color.webp?v=<%= version %>" alt=""
+                        data-translate="horizontal_logo_color_alt" class="p-2 bg-white"
+                        style="width: <%= logotype.usage.reduction.horizontal.size %>;"><span class="m-1"
+                        data-translate="horizontal_logo_color_text">
+                        <%= logotype.usage.reduction.horizontal.text %>
+                    </span></div>
+                <div class="p-1"><img src="assets/files/symbol/sy-color.webp?v=<%= version %>" alt=""
+                        data-translate="symbol_logo_color_alt" class="p-2 bg-white"
+                        style="width: <%= logotype.usage.reduction.symbol.size %>;"><span class="m-1"
+                        data-translate="symbol_logo_color_text">
+                        <%= logotype.usage.reduction.symbol.text %>
+                    </span></div>
+                <div class="p-1"><img src="assets/files/vertical/lg-vt-color.webp?v=<%= version %>" alt=""
+                        data-translate="vertical_logo_color_alt" class="p-2 bg-white"
+                        style="width: <%= logotype.usage.reduction.vertical.size %>;"><span class="m-1"
+                        data-translate="vertical_logo_color_text">
+                        <%= logotype.usage.reduction.vertical.text %>
+                    </span></div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

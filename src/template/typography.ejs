@@ -1,0 +1,100 @@
+<%- include('../partials/header', { title: 'Typography' }) %>
+
+    <div class="container p-4">
+        <div class="row mb-5">
+            <div class="col col-md-12">
+                <h1 class="display-1 text-start" data-translate="typography">Tipografia</h1>
+                <p class="text-start" data-translate="supporting_fonts_description">As fontes de apoio servem para
+                    complementar a identidade visual e devem ser utilizadas em peças gráficas, sejam elas digitais ou
+                    impressas.</p>
+                <p class="text-start" data-translate="font_family_chosen">A família tipográfica escolhida é
+                    exemplificada e pode ser adquirida no link abaixo.</p>
+                <p class="text-start" data-translate="fonts_provided_by">Fontes fornecidas pelo GOOGLE FONTS sob as
+                    informações de licenciamento na página.</p>
+                <div class="d-flex d-sm-table btn-group-vertical" role="group">
+                    <a href="#" target="_blank">
+                        <% typography.links.forEach(function(link) { %>
+                            <button class="btn btn-outline-primary" type="button"
+                                onclick="window.open('<%= link.url %>', '_blank')">
+                                <i class="bi bi-link"></i><span class="ms-2" data-translate="font_page">
+                                    <%= link.text %>
+                                </span>
+                            </button>
+                            <% }); %>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4 mt-4">
+        <div class="row">
+            <div class="col">
+                <h2 class="font-heading-demo">
+                    <%= typography.headings.name %>
+                </h2>
+                <p>
+                    <%= typography.headings.usage %>
+                </p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 font-heading-demo">
+            <div class="col">
+                <h3 class="fw-light">Light</h3>
+                <p class="fw-light">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o
+                    p q r s t u v w x y z<br>1 2 3 4 5 6 7 8 9 0<br>@ # &amp; ? ! </p>
+            </div>
+            <div class="col">
+                <h3 class="fw-normal">Normal</h3>
+                <p class="fw-normal">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n
+                    o p q r s t u v w x y z<br>1 2 3 4 5 6 7 8 9 0<br>@ # &amp; ? ! </p>
+            </div>
+            <div class="col">
+                <h3 class="fw-semibold">Semibold</h3>
+                <p class="fw-semibold">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m
+                    n o p q r s t u v w x y z<br>1 2 3 4 5 6 7 8 9 0<br>@ # &amp; ? ! </p>
+            </div>
+            <div class="col">
+                <h3 class="fw-bold">Bold</h3>
+                <p class="fw-bold">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o
+                    p q r s t u v w x y z<br>1 2 3 4 5 6 7 8 9 0<br>@ # &amp; ? ! </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4 mt-4">
+        <div class="row">
+            <div class="col">
+                <h2 class="font-body-demo">
+                    <%= typography.body.name %>
+                </h2>
+                <p>
+                    <%= typography.body.usage %>
+                </p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 font-body-demo">
+            <div class="col">
+                <h3 class="fw-light">Light</h3>
+                <p class="fw-light">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o
+                    p q r s t u v w x y z<br>1 2 3 4 5 6 7 8 9 0<br>@ # &amp; ? ! </p>
+            </div>
+            <div class="col">
+                <h3 class="fw-normal">Normal</h3>
+                <p class="fw-normal">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n
+                    o p q r s t u v w x y z<br>1 2 3 4 5 6 7 8 9 0<br>@ # &amp; ? ! </p>
+            </div>
+            <div class="col">
+                <h3 class="fw-semibold">Semibold</h3>
+                <p class="fw-semibold">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m
+                    n o p q r s t u v w x y z<br>1 2 3 4 5 6 7 8 9 0<br>@ # &amp; ? ! </p>
+            </div>
+            <div class="col">
+                <h3 class="fw-bold">Bold</h3>
+                <p class="fw-bold">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o
+                    p q r s t u v w x y z<br>1 2 3 4 5 6 7 8 9 0<br>@ # &amp; ? ! </p>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

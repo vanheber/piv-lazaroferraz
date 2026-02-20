@@ -1,0 +1,70 @@
+<%- include('../partials/header', { title: 'Colors' }) %>
+
+    <div class="container p-4">
+        <div class="row flex-column flex-md-row">
+            <div class="col col-md-12">
+                <h1 data-translate="colors">Cores</h1>
+                <h2 data-translate="primary_colors">Cores principais</h2>
+                <p data-translate="primary_colors_description">As cores primárias desempenham um papel importante na
+                    apresentação da marca. Elas transmitem emoções e mensagens. Portanto, devem ser utilizadas em todos
+                    os materiais de comunicação seguindo as escalas apresentadas aqui e seus respectivos pesos nas peças
+                    criadas.</p>
+            </div>
+            <% colors.primary.forEach(function(color) { %>
+                <div class="col <%= color.textClass %> <%= color.class %> p-4 mx-md-1 my-1 rounded">
+                    <h3 class="<%= color.textClass %>">
+                        <%= color.name %>
+                    </h3>
+                    <p class="<%= color.textClass %>"><%- color.codes %></p>
+                </div>
+                <% }); %>
+
+                    <% if (theme.colors.tertiary) { %>
+                        <!-- Optional Tertiary Color Block -->
+                        <!-- We check if it's defined in theme.colors, but we might need more info like name/codes from config if it's not standard. 
+                  However, based on the user request, they just said "A terciária pode existir ou não". 
+                  If it exists in the 'colors.primary' array in config, it will be rendered by the loop above.
+                  If the user meant we should auto-detect from theme.colors, we would need a different logic.
+                  Given the config structure I created, the user (GEM) should add the tertiary color object to the 'colors.primary' array if it exists.
+                  So the loop above handles it perfectly. -->
+                        <% } %>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <div class="row flex-column flex-md-row">
+            <div class="col col-md-12">
+                <h2 data-translate="functional_colors">Cores funcionais</h2>
+                <p data-translate="functional_colors_description">Cores funcionais não fazem parte da paleta principal.
+                    Elas são cores complementares para uso exclusivo em elementos gráficos informativos, de aviso, de
+                    status e de alerta. Podem ser usadas em caixas dinâmicas, ícones ou outros elementos destinados a
+                    fins informativos.</p>
+            </div>
+            <div class="col bg-info rounded p-4 mx-md-1 my-1">
+                <h3 class="display-5 text-dark">info</h3>
+                <p class="text-dark">
+                    <%= theme.colors.info %>
+                </p>
+            </div>
+            <div class="col bg-success rounded p-4 mx-md-1 my-1">
+                <h3 class="display-5 text-dark">success</h3>
+                <p class="text-dark">
+                    <%= theme.colors.success %>
+                </p>
+            </div>
+            <div class="col bg-warning rounded p-4 mx-md-1 my-1">
+                <h3 class="display-5 text-dark">warning</h3>
+                <p class="text-dark">
+                    <%= theme.colors.warning %>
+                </p>
+            </div>
+            <div class="col bg-danger rounded p-4 mx-md-1 my-1">
+                <h3 class="display-5 text-light">danger</h3>
+                <p class="text-light">
+                    <%= theme.colors.danger %>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

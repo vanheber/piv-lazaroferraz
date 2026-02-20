@@ -1,0 +1,50 @@
+<%- include('../partials/header', { title: 'About' }) %>
+
+    <div class="container p-4">
+        <div class="row mb-5">
+            <div class="col col-md-12">
+                <h1 class="text-start" data-translate="the_company">Sobre</h1>
+                <% about.description.forEach(function(paragraph) { %>
+                    <p class="text-start" data-translate="about_text">
+                        <%= paragraph %>
+                    </p>
+                    <% }); %>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 mb-5">
+            <div class="col mx-auto">
+                <img src="https://img.agenciaquadri.com.br/cardscolor/visao.svg" alt="Visão" width="80px" />
+                <h2 class="text-start" data-translate="vision">Visão</h2>
+                <p class="text-start" data-translate="vision_text"><%- about.vision %></p>
+            </div>
+            <div class="col mx-auto">
+                <img src="https://img.agenciaquadri.com.br/cardscolor/missao.svg" alt="Missão" width="80px" />
+                <h2 class="text-start" data-translate="mission">Missão</h2>
+                <p class="text-start" data-translate="mission_text"><%- about.mission %></p>
+            </div>
+            <div class="col mx-auto">
+                <img src="https://img.agenciaquadri.com.br/cardscolor/valores.svg" alt="Valores" width="80px" />
+                <h2 class="text-start" data-translate="values">Valores</h2>
+                <ul class="text-start" data-translate="values_1">
+                    <% about.values.forEach(function(item) { %>
+                        <li>
+                            <%= item %>
+                        </li>
+                        <% }); %>
+                </ul>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col">
+                <h2 class="text-start" data-translate="voice_tone">Voz, tom e ênfase</h2>
+                <p class="text-start" data-translate="voice_tone_text">
+                    <%= about.voiceTone.description %>
+                </p>
+                <% about.voiceTone.points.forEach(function(point) { %>
+                    <p class="text-start" data-translate="voice_tone_text"><%- point %></p>
+                    <% }); %>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

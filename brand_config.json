@@ -1,0 +1,142 @@
+{
+    "brandName": "PIV Digital",
+    "theme": {
+        "colors": {
+            "primary": "#1e1e1e",
+            "secondary": "#3d5a80",
+            "tertiary": "#98c1a9",
+            "info": "#90c2e7",
+            "success": "#98c1a9",
+            "warning": "#f4a261",
+            "danger": "#b00020",
+            "light": "#f8f9fa",
+            "dark": "#212529"
+        },
+        "fonts": {
+            "headings": {
+                "name": "Sora",
+                "url": "https://fonts.googleapis.com/css?family=Sora&display=swap",
+                "family": "'Sora', sans-serif"
+            },
+            "body": {
+                "name": "Lora",
+                "url": "https://fonts.googleapis.com/css?family=Lora&display=swap",
+                "family": "'Lora', serif"
+            }
+        }
+    },
+    "about": {
+        "description": [
+            "Weber iniciou sua jornada criativa ainda na adolescência, como aprendiz em uma gráfica nos anos 80.",
+            "Com uma trajetória que percorre desde a arte final em nanquim até a identidade visual orientada por IA, sua experiência se estende por todas as fases da evolução do design gráfico e digital."
+        ],
+        "vision": "Ser referência em identidade visual com propósito, unindo tradição técnica e inovação com IA, sendo o designer escolhido por quem valoriza <strong>conhecimento, ética e simplicidade</strong>.",
+        "mission": "Traduzir essência em imagem, criando identidades visuais claras, éticas e relevantes para profissionais e marcas que desejam se expressar com <strong>verdade e consistência</strong>.",
+        "values": [
+            "Conhecimento aplicado",
+            "Simplicidade inteligente",
+            "Clareza e método (regra dos 5)",
+            "Ética e integridade",
+            "Compromisso com a palavra dada"
+        ],
+        "voiceTone": {
+            "description": "O tom de voz da marca é preciso, confiável e reflexivo.",
+            "points": [
+                "<strong>Clareza e simplicidade</strong>: “Cada marca carrega um universo. Meu papel é torná-lo visível.”",
+                "<strong>Autoridade acessível:</strong> “Quatro décadas de design. A tecnologia muda, a essência permanece.”",
+                "<strong>Inteligente, mas humano</strong>: “Com a IA ou com nanquim, o mais importante é saber o que se quer dizer.”",
+                "<strong><span class=\"text-danger\">Evitar</span></strong>: Termos genéricos de marketing (\"impactante\", \"explosivo\", \"sensacional\") e jargões vazios."
+            ]
+        }
+    },
+    "colors": {
+        "primary": [
+            {
+                "name": "Cor primária",
+                "class": "bg-primary",
+                "textClass": "text-light",
+                "codes": "​C0 M0 Y0 K50<br>​#1e1e1e<br>Pantone 7547 C"
+            },
+            {
+                "name": "Cor secundária",
+                "class": "bg-secondary",
+                "textClass": "text-light",
+                "codes": "​C50 M30 Y0 K50<br>​#3d5a80<br>Pantone 7699 C"
+            }
+        ]
+    },
+    "typography": {
+        "links": [
+            {
+                "text": "Página da fonte título",
+                "url": "https://fonts.google.com/specimen/Sora"
+            },
+            {
+                "text": "Página da fonte texto",
+                "url": "https://fonts.google.com/specimen/Lora"
+            }
+        ],
+        "headings": {
+            "name": "Sora",
+            "usage": "Fonte para títulos"
+        },
+        "body": {
+            "name": "Lora",
+            "usage": "Fonte para texto corrido"
+        }
+    },
+    "brandEssence": {
+        "conceptDefense": {
+            "text": "O logotipo tem design tipográfico geométrico e minimalista, traduzindo os pilares da marca: clareza, método e inteligência visual.",
+            "strengths": [
+                "Geometria racional → conecta-se ao arquétipo do Arquiteto, transmitindo estrutura e precisão.",
+                "Minimalismo técnico → sofisticação sem excesso, fiel à ideia de “essência visível”.",
+                "Alinhamento modular → reflete método e a Regra dos 5.",
+                "Tipografia autoral → exclusiva, comunica domínio técnico.",
+                "Leitura dupla → remete a grids e esquemas arquitetônicos, reforçando design pensado."
+            ]
+        },
+        "archetypes": {
+            "primary": "arquiteto",
+            "secondary": "criador"
+        }
+    },
+    "logotype": {
+        "usage": {
+            "safetyArea": {
+                "description": "Nenhum elemento gráfico deve invadir a área de segurança indicada pela linha pontilhada. A margem equivale à largura da letra <strong>E</strong> no nome a partir dos pontos indicados. Use a mesma regra para a versão horizontal."
+            },
+            "reduction": {
+                "horizontal": {
+                    "text": "Tamanho mínimo em 250 pixels e 5cm.",
+                    "size": "250px"
+                },
+                "symbol": {
+                    "text": "Tamanho mínimo em 30 pixels e 0.5cm.",
+                    "size": "30px"
+                },
+                "vertical": {
+                    "text": "Tamanho mínimo em 150pixels e 2,5cm.",
+                    "size": "150px"
+                }
+            }
+        }
+    },
+    "stationery": {
+        "downloadLink": "https://drive.google.com/drive/folders/1ce2MMGLqrh4jFjVASMrPc08Qohj91KFs?usp=sharing"
+    },
+    "contact": {
+        "whatsapp": {
+            "number": "5514997085053",
+            "message": "Quero tirar dúvida do manual da marca PIV Digital"
+        },
+        "social": {
+            "website": "https://www.weber.design",
+            "linkedin": "https://www.linkedin.com/in/weber-designer/",
+            "instagram": "https://www.instagram.com/webersondesign/",
+            "facebook": "",
+            "x": "",
+            "tiktok": ""
+        }
+    }
+}

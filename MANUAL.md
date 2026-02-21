@@ -1,4 +1,4 @@
-# Manual de Operação - PIV Digital
+﻿# Manual de Operação - PIV Digital
 
 Este manual descreve como manter, configurar e expandir o site PIV Digital.
 
@@ -51,17 +51,17 @@ Para trocar a identidade visual, substitua os arquivos nas pastas abaixo mantend
 
 ### Logos Horizontais (`src/assets/files/horizontal/`)
 - `lg-hz-color.webp` - Logo horizontal colorida
-- `lg-hz-color-white.webp` - Logo horizontal colorida (fundo escuro)
+- `lg-hz-color-inverted.webp` - Logo horizontal colorida (fundo escuro)
 - `lg-hz-bw.webp` - Logo horizontal preto e branco
 
 ### Logos Verticais (`src/assets/files/vertical/`)
 - `lg-vt-color.webp` - Logo vertical colorida
-- `lg-vt-color-white.webp` - Logo vertical colorida (fundo escuro)
+- `lg-vt-color-inverted.webp` - Logo vertical colorida (fundo escuro)
 - `lg-vt-bw.webp` - Logo vertical preto e branco
 
 ### Símbolos (`src/assets/files/symbol/`)
 - `sy-color.webp` - Símbolo colorido
-- `sy-color-white.webp` - Símbolo colorido (fundo escuro)
+- `sy-color-inverted.webp` - Símbolo colorido (fundo escuro)
 
 ### Papelaria (`src/assets/img/stationery/`)
 - `business-card-front.webp` - Frente do cartão de visita

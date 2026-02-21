@@ -1,4 +1,4 @@
-/**
+﻿/**
  * PIVdigital - Script de Scaffolding para Novo Cliente
  * 
  * Este script automatiza a criação de um novo projeto PIVdigital para um cliente.
@@ -188,17 +188,17 @@ function generateChecklist(clientSlug) {
 
 ### 3.1. Logos Horizontais (\`src/assets/files/horizontal/\`)
 - [ ] \`lg-hz-color.webp\`
-- [ ] \`lg-hz-color-white.webp\`
+- [ ] \`lg-hz-color-inverted.webp\`
 - [ ] \`lg-hz-bw.webp\`
 
 ### 3.2. Logos Verticais (\`src/assets/files/vertical/\`)
 - [ ] \`lg-vt-color.webp\`
-- [ ] \`lg-vt-color-white.webp\`
+- [ ] \`lg-vt-color-inverted.webp\`
 - [ ] \`lg-vt-bw.webp\`
 
 ### 3.3. Símbolos (\`src/assets/files/symbol/\`)
 - [ ] \`sy-color.webp\`
-- [ ] \`sy-color-white.webp\`
+- [ ] \`sy-color-inverted.webp\`
 
 ### 3.4. Favicons (\`src/assets/files/favicon/\`)
 - [ ] \`favicon-light.png\`

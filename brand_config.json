@@ -55,13 +55,23 @@
                 "name": "Cor primária",
                 "class": "bg-primary",
                 "textClass": "text-light",
-                "codes": "​C0 M0 Y0 K50<br>​#1e1e1e<br>Pantone 7547 C"
+                "codes": {
+                    "cmyk": "C0 M0 Y0 K50",
+                    "hex": "#1e1e1e",
+                    "pantoneC": "Pantone 7547 C",
+                    "pantoneU": "Pantone 7547 U"
+                }
             },
             {
                 "name": "Cor secundária",
                 "class": "bg-secondary",
                 "textClass": "text-light",
-                "codes": "​C50 M30 Y0 K50<br>​#3d5a80<br>Pantone 7699 C"
+                "codes": {
+                    "cmyk": "C50 M30 Y0 K50",
+                    "hex": "#3d5a80",
+                    "pantoneC": "Pantone 7699 C",
+                    "pantoneU": "Pantone 7699 U"
+                }
             }
         ]
     },

@@ -6,22 +6,13 @@ const archiver = require('archiver');
 const srcDir = path.join(__dirname, 'src');
 const MAMP_HTDOCS = 'C:\\MAMP\\htdocs';
 const AGENCY_DIR = 'PIV';
-const CLIENT_SLUG = 'pivdigital';
-const distDir = path.join(MAMP_HTDOCS, AGENCY_DIR, CLIENT_SLUG);
+// CLIENT_SLUG é definido dinamicamente a partir de brand_config.json → slugName
 const templateDir = path.join(srcDir, 'template');
 
 async function build() {
     console.log('Starting build...');
 
-    // 1. Clean dist
-    await fs.emptyDir(distDir);
-    console.log('Cleaned dist directory.');
-
-    // 2. Copy assets
-    await fs.copy(path.join(srcDir, 'assets'), path.join(distDir, 'assets'));
-    console.log('Copied assets.');
-
-    // 3. Load Brand Config
+    // 1. Load Brand Config (must be first — distDir depends on slugName)
     let brandConfig = {};
     try {
         brandConfig = await fs.readJson(path.join(__dirname, 'brand_config.json'));
@@ -29,6 +20,21 @@ async function build() {
     } catch (err) {
         console.warn('Warning: brand_config.json not found or invalid. Using empty config.');
     }
+
+    const clientSlug = brandConfig.slugName;
+    if (!clientSlug) {
+        throw new Error('brand_config.json está sem "slugName". Defina o slug do cliente antes de buildar.');
+    }
+    const distDir = path.join(MAMP_HTDOCS, AGENCY_DIR, clientSlug);
+    console.log(`Build target: ${distDir}`);
+
+    // 2. Clean dist
+    await fs.emptyDir(distDir);
+    console.log('Cleaned dist directory.');
+
+    // 3. Copy assets
+    await fs.copy(path.join(srcDir, 'assets'), path.join(distDir, 'assets'));
+    console.log('Copied assets.');
 
     // 3.1 Generate theme.css
     if (brandConfig.theme && brandConfig.theme.colors) {

@@ -1,76 +1,76 @@
 {
-    "brandName": "PIV Digital",
+    "brandName": "Lázaro Ferraz",
+    "slugName": "lazaroferraz",
     "theme": {
         "colors": {
-            "primary": "#1e1e1e",
-            "secondary": "#3d5a80",
-            "tertiary": "#98c1a9",
-            "info": "#90c2e7",
-            "success": "#98c1a9",
-            "warning": "#f4a261",
-            "danger": "#b00020",
+            "primary": "#0047BB",
+            "secondary": "#000033",
+            "info": "#0dcaf0",
+            "success": "#198754",
+            "warning": "#ffc107",
+            "danger": "#dc3545",
             "light": "#f8f9fa",
             "dark": "#212529"
         },
         "fonts": {
             "headings": {
-                "name": "Sora",
-                "url": "https://fonts.googleapis.com/css?family=Sora&display=swap",
-                "family": "'Sora', sans-serif"
+                "name": "DESIGNER_PREENCHE",
+                "url": "DESIGNER_PREENCHE",
+                "family": "DESIGNER_PREENCHE"
             },
             "body": {
-                "name": "Lora",
-                "url": "https://fonts.googleapis.com/css?family=Lora&display=swap",
-                "family": "'Lora', serif"
+                "name": "DESIGNER_PREENCHE",
+                "url": "DESIGNER_PREENCHE",
+                "family": "DESIGNER_PREENCHE"
             }
         }
     },
     "about": {
         "description": [
-            "Weber iniciou sua jornada criativa ainda na adolescência, como aprendiz em uma gráfica nos anos 80.",
-            "Com uma trajetória que percorre desde a arte final em nanquim até a identidade visual orientada por IA, sua experiência se estende por todas as fases da evolução do design gráfico e digital."
+            "A marca Lázaro Ferraz nasce da fusão entre a precisão da engenharia e a profundidade da neurociência aplicada à gestão.",
+            "Com 30 anos de experiência acadêmica e industrial, o Instituto Lázaro Ferraz (ICD) capacita líderes a transformarem equipes através do Pensamento Estratégico."
         ],
-        "vision": "Ser referência em identidade visual com propósito, unindo tradição técnica e inovação com IA, sendo o designer escolhido por quem valoriza <strong>conhecimento, ética e simplicidade</strong>.",
-        "mission": "Traduzir essência em imagem, criando identidades visuais claras, éticas e relevantes para profissionais e marcas que desejam se expressar com <strong>verdade e consistência</strong>.",
+        "vision": "Ser a principal <strong>referência em formação</strong> de líderes humanistas com mentalidade orientada a <strong>resultados</strong> na era digital.",
+        "mission": "Promover a <strong>liderança que transforma</strong> indivíduos em realizadores de <strong>tarefas extraordinárias</strong>.",
         "values": [
-            "Conhecimento aplicado",
-            "Simplicidade inteligente",
-            "Clareza e método (regra dos 5)",
-            "Ética e integridade",
-            "Compromisso com a palavra dada"
+            "Ética inegociável",
+            "Humanismo central",
+            "Inovação contínua",
+            "Liderança servidora",
+            "Pragmatismo técnico"
         ],
         "voiceTone": {
-            "description": "O tom de voz da marca é preciso, confiável e reflexivo.",
+            "description": "Uma voz educadora e sábia, mantendo um tom acolhedor e profundamente ético.",
             "points": [
-                "<strong>Clareza e simplicidade</strong>: “Cada marca carrega um universo. Meu papel é torná-lo visível.”",
-                "<strong>Autoridade acessível:</strong> “Quatro décadas de design. A tecnologia muda, a essência permanece.”",
-                "<strong>Inteligente, mas humano</strong>: “Com a IA ou com nanquim, o mais importante é saber o que se quer dizer.”",
-                "<strong><span class=\"text-danger\">Evitar</span></strong>: Termos genéricos de marketing (\"impactante\", \"explosivo\", \"sensacional\") e jargões vazios."
+                "<strong>Sábio</strong>: \"A verdadeira transformação começa quando entendemos a ciência por trás da motivação.\"",
+                "<strong>Acolhedor</strong>: \"O comprometimento de uma equipe não se cobra, se cultiva.\"",
+                "<strong>Estruturado</strong>: \"Liderança não é um evento isolado, é um sistema de alta performance.\"",
+                "<strong><span class=\"text-danger\">Evitar</span></strong>: Gírias como 'top', 'véio' ou termos informais como 'pulo do gato' e 'mindset'."
             ]
         }
     },
     "colors": {
         "primary": [
             {
-                "name": "Cor primária",
+                "name": "Azul Real",
                 "class": "bg-primary",
                 "textClass": "text-light",
                 "codes": {
-                    "cmyk": "C0 M0 Y0 K50",
-                    "hex": "#1e1e1e",
-                    "pantoneC": "Pantone 7547 C",
-                    "pantoneU": "Pantone 7547 U"
+                    "cmyk": "C100 M75 Y0 K0",
+                    "hex": "#0047BB",
+                    "pantoneC": "Pantone 2728 C",
+                    "pantoneU": "Pantone 2173 U"
                 }
             },
             {
-                "name": "Cor secundária",
+                "name": "Cinza Nankin",
                 "class": "bg-secondary",
                 "textClass": "text-light",
                 "codes": {
-                    "cmyk": "C50 M30 Y0 K50",
-                    "hex": "#3d5a80",
-                    "pantoneC": "Pantone 7699 C",
-                    "pantoneU": "Pantone 7699 U"
+                    "cmyk": "C100 M90 Y0 K80",
+                    "hex": "#000033",
+                    "pantoneC": "Pantone 276 C",
+                    "pantoneU": "Pantone 282 U"
                 }
             }
         ]
@@ -79,36 +79,36 @@
         "links": [
             {
                 "text": "Página da fonte título",
-                "url": "https://fonts.google.com/specimen/Sora"
+                "url": "DESIGNER_PREENCHE"
             },
             {
                 "text": "Página da fonte texto",
-                "url": "https://fonts.google.com/specimen/Lora"
+                "url": "DESIGNER_PREENCHE"
             }
         ],
         "headings": {
-            "name": "Sora",
+            "name": "Serifada Robusta",
             "usage": "Fonte para títulos"
         },
         "body": {
-            "name": "Lora",
+            "name": "Sem-Serifa Geométrica",
             "usage": "Fonte para texto corrido"
         }
     },
     "brandEssence": {
         "conceptDefense": {
-            "text": "O logotipo tem design tipográfico geométrico e minimalista, traduzindo os pilares da marca: clareza, método e inteligência visual.",
+            "text": "O logotipo funde o esquadro, que representa a retidão ética, à figura do farol, símbolo da visão estratégica que dissipa a neblina operacional.",
             "strengths": [
-                "Geometria racional → conecta-se ao arquétipo do Arquiteto, transmitindo estrutura e precisão.",
-                "Minimalismo técnico → sofisticação sem excesso, fiel à ideia de “essência visível”.",
-                "Alinhamento modular → reflete método e a Regra dos 5.",
-                "Tipografia autoral → exclusiva, comunica domínio técnico.",
-                "Leitura dupla → remete a grids e esquemas arquitetônicos, reforçando design pensado."
+                "Farol → Clareza e direção para equipes",
+                "Esquadro → Precisão e conduta ética",
+                "Triângulo → Domínio dos pilares 3 Es",
+                "Portal → Gestão como sistema auditável",
+                "Letra L → Identidade do mentor e solidez"
             ]
         },
         "archetypes": {
-            "primary": "arquiteto",
-            "secondary": "criador"
+            "primary": "sabio",
+            "secondary": "arquiteto"
         }
     },
     "logotype": {
@@ -126,24 +126,24 @@
                     "size": "30px"
                 },
                 "vertical": {
-                    "text": "Tamanho mínimo em 150pixels e 2,5cm.",
+                    "text": "Tamanho mínimo em 150 pixels e 2,5cm.",
                     "size": "150px"
                 }
             }
         }
     },
     "stationery": {
-        "downloadLink": "https://drive.google.com/drive/folders/1ce2MMGLqrh4jFjVASMrPc08Qohj91KFs?usp=sharing"
+        "downloadLink": "DESIGNER_PREENCHE"
     },
     "contact": {
         "whatsapp": {
-            "number": "5514997085053",
-            "message": "Quero tirar dúvida do manual da marca PIV Digital"
+            "number": "DESIGNER_PREENCHE",
+            "message": "Olá! Gostaria de falar sobre o método 3 Es e as diretrizes do manual da marca Lázaro Ferraz."
         },
         "social": {
-            "website": "https://www.weber.design",
-            "linkedin": "https://www.linkedin.com/in/weber-designer/",
-            "instagram": "https://www.instagram.com/webersondesign/",
+            "website": "DESIGNER_PREENCHE",
+            "linkedin": "DESIGNER_PREENCHE",
+            "instagram": "DESIGNER_PREENCHE",
             "facebook": "",
             "x": "",
             "tiktok": ""

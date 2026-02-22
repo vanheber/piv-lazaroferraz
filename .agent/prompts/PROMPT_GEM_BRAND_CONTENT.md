@@ -51,6 +51,7 @@ Preencha este template exatamente. A regra de preenchimento é:
 ```json
 {
     "brandName": "GEM: Nome da marca",
+    "slugName": "GEM: slug do cliente em minúsculas, sem espaços, sem acentos, palavras separadas por hífen (ex: empresa-xyz)",
     "theme": {
         "colors": {
             "primary": "GEM: hex da cor primária (copiar de colors.primary[0].codes.hex)",
@@ -215,6 +216,7 @@ O GEM deve preencher **todos os campos** com o que encontrar na base de conhecim
 | Campo | Regra |
 |---|---|
 | `brandName` | Nome exato da marca |
+| `slugName` | Slug do cliente: minúsculas, sem acentos, palavras separadas por hífen (ex: `empresa-xyz`) — define a pasta de destino do build |
 | `theme.colors.primary` | Hex copiado de `colors.primary[0].codes.hex` |
 | `theme.colors.secondary` | Hex copiado de `colors.primary[1].codes.hex` |
 | `theme.colors.tertiary` | Hex copiado de `colors.primary[2].codes.hex`, somente se houver terciária |
@@ -261,6 +263,7 @@ Adicione um terceiro objeto no array `colors.primary` com `"class": "bg-tertiary
 - [ ] JSON sintaticamente correto (nenhuma vírgula faltando ou sobrando)
 - [ ] Todas as chaves do template presentes, sem omissões
 - [ ] Nenhuma anotação, citation ou comentário no output
+- [ ] `slugName` preenchido (minúsculas, sem acentos, sem espaços, palavras separadas por hífen)
 - [ ] `about.values` com exatamente 5 itens
 - [ ] `brandEssence.conceptDefense.strengths` com exatamente 5 itens
 - [ ] `about.voiceTone.points` com exatamente 4 itens (3 características + 1 Evitar)

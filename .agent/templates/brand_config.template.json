@@ -2,6 +2,7 @@
     "_comment": "Template de configuração de marca para PIVdigital. Substitua os valores entre [COLCHETES] com as informações do cliente.",
     "_instructions": "Este arquivo deve ser preenchido com auxílio do agente GEM do cliente para gerar copywriting alinhado com a identidade da marca.",
     "brandName": "[NOME DA MARCA]",
+    "slugName": "[SLUG_DO_CLIENTE]",
     "theme": {
         "colors": {
             "primary": "[HEX_COR_PRIMARIA]",

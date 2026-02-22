@@ -15,16 +15,22 @@
                     <h3 class="<%= color.textClass %>">
                         <%= color.name %>
                     </h3>
-                    <p class="<%= color.textClass %>">
-                        <% if (color.codes && typeof color.codes === 'object') { %>
-                            <%= color.codes.cmyk %><br>
-                            <%= color.codes.hex %><br>
-                            <%= color.codes.pantoneC %><br>
+                    <% if (color.codes && typeof color.codes==='object' ) { %>
+                        <p class="<%= color.textClass %> mb-1">
+                            <%= color.codes.cmyk %>
+                        </p>
+                        <p class="<%= color.textClass %> mb-1">
+                            <%= color.codes.hex %>
+                        </p>
+                        <p class="<%= color.textClass %> mb-1">
+                            <%= color.codes.pantoneC %>
+                        </p>
+                        <p class="<%= color.textClass %> mb-0">
                             <%= color.codes.pantoneU %>
-                        <% } else if (color.codes) { %>
-                            <%- color.codes %>
-                        <% } %>
-                    </p>
+                        </p>
+                        <% } else { %>
+                            <p class="<%= color.textClass %>"><%- color.codes %></p>
+                            <% } %>
                 </div>
                 <% }); %>
 

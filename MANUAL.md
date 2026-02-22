@@ -27,7 +27,7 @@ O site utiliza **EJS** para templates e um arquivo `brand_config.json` para cent
 Este é o coração do sistema. Nele você define:
 
 - **Theme**:
-  - **Colors**: Hex codes para `primary`, `secondary`, etc. O sistema gera automaticamente o CSS.
+  - **Colors** (`theme.colors`): Hex codes para `primary`, `secondary`, `tertiary`, `info`, `success`, `warning` e `danger`. O sistema gera automaticamente o CSS com variáveis Bootstrap.
   - **Fonts**: URLs e nomes de fontes do Google Fonts.
 - **Content**:
   - Textos para as seções "Sobre", "Visão", "Missão", "Valores".
@@ -38,6 +38,50 @@ Este é o coração do sistema. Nele você define:
   - Número e mensagem do WhatsApp.
 
 **Nota**: Campos comuns (como títulos de seções padrão) são fixos nos templates e não precisam estar no JSON.
+
+### Paleta de Cores (`colors.primary`)
+
+As cores da paleta visual da marca — primária, secundária e (opcionalmente) terciária — são definidas no array `colors.primary`. Cada entrada usa o campo `codes` como **objeto estruturado** com os seguintes campos:
+
+```json
+"codes": {
+    "cmyk":     "C50 M30 Y0 K50",
+    "hex":      "#3d5a80",
+    "pantoneC": "Pantone 7699 C",
+    "pantoneU": "Pantone 7699 U"
+}
+```
+
+| Campo | Descrição |
+|---|---|
+| `cmyk` | Valores CMYK para impressão |
+| `hex` | Cor hexadecimal para uso digital |
+| `pantoneC` | Equivalente Pantone **Coated** (papel couchê) |
+| `pantoneU` | Equivalente Pantone **Uncoated** (papel offset) |
+
+### Cores Funcionais (`theme.colors`)
+
+As cores funcionais (`info`, `success`, `warning`, `danger`) são definidas **apenas como hex** em `theme.colors`. Elas **não possuem** entradas de CMYK ou Pantone — são de uso exclusivo em interfaces digitais (badges, alertas, ícones informativos).
+
+### Elevando uma Cor Funcional a Terciária
+
+Se uma cor funcional for escolhida como cor terciária da paleta, ela deve ganhar uma entrada própria em `colors.primary` com o objeto `codes` completo:
+
+```json
+{
+    "name": "Cor terciária",
+    "class": "bg-tertiary",
+    "textClass": "text-dark",
+    "codes": {
+        "cmyk":     "C0 M35 Y70 K0",
+        "hex":      "#f4a261",
+        "pantoneC": "Pantone 7409 C",
+        "pantoneU": "Pantone 7409 U"
+    }
+}
+```
+
+O template `colors.ejs` detecta automaticamente se `codes` é um objeto e renderiza os quatro campos. O hex em `theme.colors.tertiary` continua sendo usado para gerar o CSS do tema.
 
 ### Arquétipos
 Os arquétipos da marca são definidos no `brand_config.json` na seção `archetypes`. Durante o build, o sistema busca automaticamente as descrições, termos e imagens de cada arquétipo da **fonte oficial**:
@@ -144,7 +188,9 @@ Ao criar um novo repositório para um cliente:
 
 - [ ] **2. Configuração**
   - [ ] Editar `brand_config.json`:
-    - [ ] Cores do tema (`theme.colors`)
+  - [ ] Cores do tema (`theme.colors`) — hex de todas as cores incluindo funcionais
+    - [ ] Paleta visual (`colors.primary`) — objeto `codes` com `cmyk`, `hex`, `pantoneC` e `pantoneU` para cada cor
+
     - [ ] Fontes (`theme.fonts`)
     - [ ] Conteúdos (about, vision, mission, values)
     - [ ] Arquétipos escolhidos (`archetypes`)

@@ -25,9 +25,10 @@ Gerar todo o conteúdo textual necessário para preencher o arquivo `brand_confi
 - Diferenciais
 - Personalidade da marca
 - Referências visuais
-- Cores escolhidas (nome/HEX)
+- Cores escolhidas (nome / HEX / CMYK / Pantone C e U)
 - Fontes escolhidas
 - Arquétipos identificados
+- Se alguma cor funcional (info, success, warning, danger) foi elevada a terciária da paleta
 
 ---
 
@@ -191,6 +192,61 @@ Mensagem padrão quando o usuário clicar no botão WhatsApp do manual.
 
 ---
 
+### 4. COLORS (Paleta de Cores)
+
+Esta seção define as cores da paleta visual da marca no array `colors.primary`. Cada entrada corresponde a uma cor (primária, secundária e, opcionalmente, terciária).
+
+#### Regras obrigatórias
+
+- **Cores da paleta** (primária e secundária): **sempre** possuem o objeto `codes` completo com os quatro campos: `cmyk`, `hex`, `pantoneC` e `pantoneU`.
+- **Pantone C** = código Pantone para papel couchê (materiais impressos de alta qualidade).
+- **Pantone U** = código Pantone para papel offset/color-u (impressão comum, papel não revestido).
+- **Cores funcionais** (`info`, `success`, `warning`, `danger`): definidas **apenas** em `theme.colors` como hex. **Não** geram entrada em `colors.primary` nem possuem CMYK ou Pantone, pois são de uso exclusivo digital.
+- **Excessão**: se uma cor funcional for escolhida como cor terciária da paleta, ela **deve** receber uma entrada em `colors.primary` com o objeto `codes` completo.
+
+#### Campos de cada entrada
+
+| Campo | Descrição |
+|---|---|
+| `name` | Nome da cor para exibição (ex: "Cor primária") |
+| `class` | Classe Bootstrap de fundo (ex: `bg-primary`) |
+| `textClass` | Classe Bootstrap de texto (`text-light` ou `text-dark`) |
+| `codes.cmyk` | Ex: `C50 M30 Y0 K50` |
+| `codes.hex` | Ex: `#3d5a80` |
+| `codes.pantoneC` | Ex: `Pantone 7699 C` |
+| `codes.pantoneU` | Ex: `Pantone 7699 U` |
+
+```json
+"colors": {
+    "primary": [
+        {
+            "name": "Cor primária",
+            "class": "bg-primary",
+            "textClass": "text-light",
+            "codes": {
+                "cmyk": "[C_M_Y_K]",
+                "hex": "[#HEX]",
+                "pantoneC": "Pantone [NUMERO] C",
+                "pantoneU": "Pantone [NUMERO] U"
+            }
+        },
+        {
+            "name": "Cor secundária",
+            "class": "bg-secondary",
+            "textClass": "text-light",
+            "codes": {
+                "cmyk": "[C_M_Y_K]",
+                "hex": "[#HEX]",
+                "pantoneC": "Pantone [NUMERO] C",
+                "pantoneU": "Pantone [NUMERO] U"
+            }
+        }
+    ]
+}
+```
+
+**Se houver cor terciária**, adicione uma terceira entrada ao array seguindo o mesmo padrão, com `"class": "bg-tertiary"`. O hex da terciária também deve estar presente em `theme.colors.tertiary`.
+
 ## Observações Importantes
 
 ### Estilo de Escrita
@@ -228,12 +284,17 @@ Estruture assim:
 {
     "brandName": "[NOME_DA_MARCA]",
     "about": { ... },
+    "colors": {
+        "primary": [ ... ]
+    },
     "brandEssence": { ... },
     "contact": {
         "whatsapp": { ... }
     }
 }
 ```
+
+> **Nota**: As chaves `theme.colors` e `theme.fonts` são preenchidas manualmente pelo designer após a definição da paleta. O GEM não precisa gerá-las — exceto confirmar quais hexes foram usados em `colors.primary[].codes.hex` para que o designer possa copiar ao preencher `theme.colors`.
 
 ---
 
@@ -248,6 +309,10 @@ Antes de entregar, verifique:
 - [ ] 5 valores listados
 - [ ] 5 forças do conceito listadas
 - [ ] Mensagem WhatsApp é natural e convidativa
+- [ ] `colors.primary` contém ao menos primária e secundária
+- [ ] Cada cor da paleta possui `codes` com `cmyk`, `hex`, `pantoneC` e `pantoneU`
+- [ ] Cores funcionais **não** estão em `colors.primary` (a menos que sejam terciárias)
+- [ ] Se há terciária, o hex também está em `theme.colors.tertiary`
 - [ ] JSON está sintaticamente correto
 - [ ] Nenhum placeholder `[INSERIR...]` permanece no texto
 

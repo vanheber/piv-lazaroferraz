@@ -126,9 +126,6 @@
             }
         }
     },
-    "stationery": {
-        "downloadLink": "[URL_GOOGLE_DRIVE_OU_DROPBOX_PAPELARIA]"
-    },
     "contact": {
         "whatsapp": {
             "number": "[CÓDIGO_PAÍS][DDD][NÚMERO]",

@@ -183,9 +183,6 @@ Preencha este template exatamente. A regra de preenchimento é:
             }
         }
     },
-    "stationery": {
-        "downloadLink": "GEM: link do Google Drive com os arquivos de papélaria, ou DESIGNER_PREENCHE"
-    },
     "contact": {
         "whatsapp": {
             "number": "GEM: código do país + DDD + número, sem espaços ou símbolos",

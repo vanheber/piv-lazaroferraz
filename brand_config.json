@@ -14,14 +14,14 @@
         },
         "fonts": {
             "headings": {
-                "name": "DESIGNER_PREENCHE",
-                "url": "DESIGNER_PREENCHE",
-                "family": "DESIGNER_PREENCHE"
+                "name": "Roboto Slab",
+                "url": "https://fonts.google.com/specimen/Roboto+Slab",
+                "family": "Roboto Slab"
             },
             "body": {
-                "name": "DESIGNER_PREENCHE",
-                "url": "DESIGNER_PREENCHE",
-                "family": "DESIGNER_PREENCHE"
+                "name": "Roboto",
+                "url": "https://fonts.google.com/specimen/Roboto",
+                "family": "Roboto"
             }
         }
     },
@@ -79,19 +79,19 @@
         "links": [
             {
                 "text": "Página da fonte título",
-                "url": "DESIGNER_PREENCHE"
+                "url": "https://fonts.google.com/specimen/Roboto+Slab"
             },
             {
                 "text": "Página da fonte texto",
-                "url": "DESIGNER_PREENCHE"
+                "url": "https://fonts.google.com/specimen/Roboto"
             }
         ],
         "headings": {
-            "name": "Serifada Robusta",
+            "name": "Roboto Slab",
             "usage": "Fonte para títulos"
         },
         "body": {
-            "name": "Sem-Serifa Geométrica",
+            "name": "Roboto",
             "usage": "Fonte para texto corrido"
         }
     },
@@ -118,35 +118,32 @@
             },
             "reduction": {
                 "horizontal": {
-                    "text": "Tamanho mínimo em 250 pixels e 5cm.",
-                    "size": "250px"
+                    "text": "Tamanho mínimo em 250 pixels e 23mm.",
+                    "size": "120px"
                 },
                 "symbol": {
-                    "text": "Tamanho mínimo em 30 pixels e 0.5cm.",
+                    "text": "Tamanho mínimo em 30 pixels e 5mm.",
                     "size": "30px"
                 },
                 "vertical": {
-                    "text": "Tamanho mínimo em 150 pixels e 2,5cm.",
-                    "size": "150px"
+                    "text": "Tamanho mínimo em 150 pixels e 15mm.",
+                    "size": "60px"
                 }
             }
         }
     },
-    "stationery": {
-        "downloadLink": "DESIGNER_PREENCHE"
-    },
     "contact": {
         "whatsapp": {
-            "number": "DESIGNER_PREENCHE",
-            "message": "Olá! Gostaria de falar sobre o método 3 Es e as diretrizes do manual da marca Lázaro Ferraz."
+            "number": "+5514997085053",
+            "message": "Olá! Gostaria de falar sobre as diretrizes do manual da marca Lázaro Ferraz."
         },
         "social": {
-            "website": "DESIGNER_PREENCHE",
-            "linkedin": "DESIGNER_PREENCHE",
-            "instagram": "DESIGNER_PREENCHE",
-            "facebook": "",
-            "x": "",
-            "tiktok": ""
+            "website": "https://lazaroferraz.com.br",
+            "linkedin": "https://linkedin.com/in/lazaroferraz",
+            "instagram": "https://instagram.com/lazaroferraz",
+            "facebook": "https://facebook.com/lazaroferraz  ",
+            "x": "https://x.com/lazaroferraz",
+            "tiktok": "https://tiktok.com/lazaroferraz"
         }
     }
 }

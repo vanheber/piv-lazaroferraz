@@ -57,7 +57,7 @@ async function build() {
 
         // Fonts
         if (fonts) {
-            if (fonts.headings) cssContent += `    --bs-font-sans-serif: ${fonts.headings.family};\n`;
+            if (fonts.headings) cssContent += `    --bs-heading-font-family: ${fonts.headings.family};\n`;
             if (fonts.body) cssContent += `    --bs-body-font-family: ${fonts.body.family};\n`;
         }
 

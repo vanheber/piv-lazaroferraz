@@ -8,11 +8,12 @@ Este projeto foi migrado de um template estático Bootstrap Studio para um gerad
 
 ## Instalação
 
-1. Clone o repositório.
-2. Na raiz do projeto, execute:
-   ```bash
-   npm install
-   ```
+As dependências são automaticamente verificadas e instaladas quando você rodar qualquer script NPM do projeto pela primeira vez (graças ao script `check-deps.js`).
+
+Mas se preferir instalar manualmente na raiz do projeto, execute:
+```bash
+npm install
+```
 
 ## Estrutura do Projeto
 
@@ -31,7 +32,6 @@ Este projeto foi migrado de um template estático Bootstrap Studio para um gerad
   - `/partials`: Componentes reutilizáveis (header, footer).
 - `/public`: Pasta gerada com o site final (não edite arquivos aqui).
 - `build.js`: Script de construção do site.
-- `deploy_mamp.js`: Script de deploy local para MAMP.
 
 ## Configuração da Marca (`brand_config.json`)
 
@@ -54,24 +54,19 @@ npm run new-client nome-do-cliente
 Este comando irá:
 - Fazer backup do `brand_config.json` atual
 - Criar novo `brand_config.json` a partir do template
-- Configurar `CLIENT_SLUG` no `deploy_mamp.js`
 - Gerar checklist personalizado de setup
 - Exibir próximos passos
 
 **Importante**: Após executar este comando, use o agente GEM para gerar o conteúdo textual do manual (ver `.agent/prompts/PROMPT_GEM_BRAND_CONTENT.md`).
 
 ### Build (Construção)
-Gera o site estático na pasta `/public`.
+Gera o site estático e publica na pasta `/public` na raiz do projeto.
 ```bash
 npm run build
 ```
 
-### Deploy (MAMP)
-Copia os arquivos gerados para a pasta do MAMP configurada no script (`C:\MAMP\htdocs\PIV\pivdigital`).
-**Importante:** O script é configurado para preservar outras pastas dentro de `C:\MAMP\htdocs\PIV`.
-```bash
-npm run deploy:mamp
-```
+### Publicação Manual (FTP)
+O novo fluxo gerará a estrutura limpa e contida na pasta `/public` que deverá ser diretamente upada por FTP pelo desenvolvedor na raiz do domínio do cliente.
 
 ## Desenvolvimento
 
@@ -81,4 +76,4 @@ npm run deploy:mamp
 4. **Estilos**:
    - `theme.css`: Gerado automaticamente (não edite).
    - `custom.css`: Para estilos manuais adicionais e controle de tema (Dark/Light).
-5. Rode `npm run build` e depois `npm run deploy` para ver as alterações no servidor local.
+5. Rode `npm run build` e veja os resultados abrindo o `index.html` da pasta `/public` gerada ou via Live Server.

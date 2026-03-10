@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PIVdigital - Script de Scaffolding para Novo Cliente
  * 
  * Este script automatiza a criação de um novo projeto PIVdigital para um cliente.
@@ -60,7 +60,6 @@ async function scaffoldNewClient(clientSlug) {
     const projectRoot = process.cwd();
     const templateConfigPath = path.join(projectRoot, '.agent', 'templates', 'brand_config.template.json');
     const targetConfigPath = path.join(projectRoot, 'brand_config.json');
-    const deployScriptPath = path.join(projectRoot, 'deploy_mamp.js');
     const checklistPath = path.join(projectRoot, `CHECKLIST_${clientSlug.toUpperCase()}.md`);
     
     try {
@@ -83,28 +82,7 @@ async function scaffoldNewClient(clientSlug) {
             log('   ⚠ Template não encontrado, pulando...', 'yellow');
         }
         
-        // 3. Atualizar deploy_mamp.js com CLIENT_SLUG
-        log('\n🔧 Configurando deploy_mamp.js...', 'blue');
-        if (fs.existsSync(deployScriptPath)) {
-            let deployContent = await fs.readFile(deployScriptPath, 'utf8');
-            
-            // Substitui CLIENT_SLUG existente ou adiciona se não existir
-            if (deployContent.includes('const CLIENT_SLUG')) {
-                deployContent = deployContent.replace(
-                    /const CLIENT_SLUG = ['"].*?['"]/,
-                    `const CLIENT_SLUG = '${clientSlug}'`
-                );
-            } else {
-                // Adiciona no início do arquivo
-                deployContent = `const CLIENT_SLUG = '${clientSlug}';\n\n${deployContent}`;
-            }
-            
-            await fs.writeFile(deployScriptPath, deployContent, 'utf8');
-            log(`   ✓ CLIENT_SLUG configurado: '${clientSlug}'`, 'green');
-        } else {
-            log('   ⚠ deploy_mamp.js não encontrado', 'yellow');
-        }
-        
+
         // 4. Criar checklist personalizado
         log('\n📝 Gerando checklist de setup...', 'blue');
         const checklistContent = generateChecklist(clientSlug);
@@ -218,23 +196,21 @@ function generateChecklist(clientSlug) {
 - [ ] \`moodsite.webp\`
 - [ ] \`moodimg01.webp\`, \`moodimg02.webp\`, etc.
 
-## ✅ 4. Build e Deploy
+## ✅ 4. Build e Publicação
 
-### 4.1. Build Local
+### 4.1. Build Local e Testes
 - [ ] Executar \`npm run build\`
 - [ ] Verificar pasta \`/public\` gerada
-- [ ] Conferir se arquivos HTML foram criados
-- [ ] Verificar \`public/assets/css/theme.css\` (cores corretas?)
-- [ ] Testar abertura de \`public/index.html\` no navegador
-
-### 4.2. Deploy MAMP
-- [ ] \`CLIENT_SLUG\` em \`deploy_mamp.js\` configurado: \`${clientSlug}\`
-- [ ] MAMP rodando
-- [ ] Executar \`npm run deploy:mamp\`
-- [ ] Acessar \`http://localhost:8888/PIV/${clientSlug}\`
+- [ ] Testar site abrindo \`/public/index.html\` via Live Server ou diretamente
+- [ ] Conferir se todas as cores estão corretas
 - [ ] Testar navegação entre páginas
-- [ ] Testar links de download
-- [ ] Testar botão WhatsApp
+- [ ] Testar links de download e botão WhatsApp
+
+### 4.2. Publicação Manual (FTP)
+- [ ] Acessar cPanel ou cliente FTP do domínio do cliente
+- [ ] Fazer upload de todo o conteúdo da pasta \`/public\`
+- [ ] Acessar url do cliente
+- [ ] Verificar se tudo carregou corretamente na versão online
 
 ### 4.3. Validação Final
 - [ ] Todas as cores aplicadas corretamente
@@ -293,10 +269,9 @@ function displayNextSteps(clientSlug) {
     log('   • Papelaria: src/assets/img/stationery/', 'cyan');
     log('   • Mood: src/assets/img/\n', 'cyan');
     
-    log('4️⃣  Build e deploy:', 'cyan');
+    log('4️⃣  Build e testes:', 'cyan');
     log('   • Execute: npm run build', 'cyan');
-    log('   • Execute: npm run deploy:mamp', 'cyan');
-    log(`   • Acesse: http://localhost:8888/PIV/${clientSlug}\n`, 'cyan');
+    log('   • Teste a pasta /public localmente\n', 'cyan');
     
     log('5️⃣  Use o checklist gerado:', 'cyan');
     log(`   • Abra: CHECKLIST_${clientSlug.toUpperCase()}.md`, 'cyan');

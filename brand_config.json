@@ -4,11 +4,11 @@
     "theme": {
         "colors": {
             "primary": "#0047BB",
-            "secondary": "#000033",
-            "info": "#0dcaf0",
-            "success": "#198754",
-            "warning": "#ffc107",
-            "danger": "#dc3545",
+            "secondary": "#221c35",
+            "info": "#307fe2",
+            "success": "#4cae04",
+            "warning": "#de882d",
+            "danger": "#e03c31",
             "light": "#f8f9fa",
             "dark": "#212529"
         },

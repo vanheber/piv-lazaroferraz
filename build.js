@@ -4,9 +4,7 @@ const ejs = require('ejs');
 const archiver = require('archiver');
 
 const srcDir = path.join(__dirname, 'src');
-const MAMP_HTDOCS = 'C:\\MAMP\\htdocs';
-const AGENCY_DIR = 'PIV';
-// CLIENT_SLUG é definido dinamicamente a partir de brand_config.json → slugName
+
 const templateDir = path.join(srcDir, 'template');
 
 async function build() {
@@ -25,7 +23,9 @@ async function build() {
     if (!clientSlug) {
         throw new Error('brand_config.json está sem "slugName". Defina o slug do cliente antes de buildar.');
     }
-    const distDir = path.join(MAMP_HTDOCS, AGENCY_DIR, clientSlug);
+
+    // Determine output directory
+    const distDir = path.join(__dirname, 'public');
     console.log(`Build target: ${distDir}`);
 
     // 2. Clean dist

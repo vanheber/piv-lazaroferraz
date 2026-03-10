@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "node check-deps.js",
     "build": "node build.js",
-    "deploy:mamp": "node deploy_mamp.js",
+    "prenew-client": "node check-deps.js",
     "new-client": "node scaffold-new-client.js"
   },
   "keywords": [],

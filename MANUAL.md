@@ -1,4 +1,4 @@
-﻿# Manual de Operação - PIV Digital
+# Manual de Operação - PIV Digital
 
 Este manual descreve como manter, configurar e expandir o site PIV Digital.
 
@@ -146,34 +146,22 @@ Para trocar a identidade visual, substitua os arquivos nas pastas abaixo mantend
 - **Manual**: Para ajustes finos que não dependem da marca (layout, espaçamentos), use `src/assets/css/custom.css`.
 - **Bootstrap**: Continue usando as classes utilitárias do Bootstrap 5.3 (`text-center`, `p-4`, `d-flex`, etc.).
 
-## 7. Build e Deploy
+## 7. Build e Publicação
 
-**IMPORTANTE**: Sempre execute o build ANTES do deploy.
+**IMPORTANTE**: A instalação das dependências (node modules) ocorre automaticamente e invisível na primeira execução mediante o script interno `check-deps.js`.
 
 ### Passo 1: Construir o Site
-Gera os arquivos finais na pasta `/public` com base no `brand_config.json` e templates EJS.
+Gera os arquivos finais com base no `brand_config.json` e templates EJS, e envia a saída limpa para a pasta `/public` na raiz do projeto.
 ```bash
 npm run build
 ```
 
-### Passo 2: Publicar no MAMP (Local)
-O script de deploy permite a configuração de múltiplos clientes dentro da pasta `PIV`.
-
-**Configuração**:
-1. Abra `deploy_mamp.js`.
-2. Edite a constante `CLIENT_SLUG` (ex: `'pivdigital'`).
-3. O caminho final será `C:\MAMP\htdocs\PIV\[CLIENT_SLUG]`.
-
-**Execução**:
-```bash
-npm run deploy:mamp
-```
+### Passo 2: Publicação Manual (FTP)
+O novo fluxo gerará a estrutura limpa e contida na pasta `/public` que deverá ser diretamente upada por FTP pelo desenvolvedor. Não é necessário mais nenhum passo via linha de comando local. Todo o conteúdo dessa pasta deve ser upado diretamente via cPanel ou cliente FTP para o servidor web.
 
 **Observações**:
-- O script cria a pasta do cliente se não existir
-- Sobrescreve arquivos existentes do cliente
-- **NÃO** apaga outras pastas de clientes em `\PIV`
-- Sempre execute `npm run build` antes do deploy
+- A pasta `/public` é regenerada e limpa a cada `npm run build`
+- É uma estrutura isolada independente de sistema operacional (Mac/Windows/Linux)
 
 ---
 
@@ -210,12 +198,11 @@ Ao criar um novo repositório para um cliente:
   - [ ] `src/assets/img/moodsite.webp`
   - [ ] `src/assets/img/moodimg01.webp`, `moodimg02.webp`, etc.
 
-- [ ] **6. Deploy Local**
-  - [ ] Configurar `CLIENT_SLUG` em `deploy_mamp.js`
+- [ ] **6. Build e Teste**
   - [ ] Executar `npm run build`
-  - [ ] Verificar pasta `/public` gerada
-  - [ ] Executar `npm run deploy:mamp`
-  - [ ] Testar site em `http://localhost:8888/PIV/[client-slug]`
+  - [ ] Ir até a pasta `/public` gerada pelo build
+  - [ ] Abrir `index.html` diretamente ou testar via extensão Live Server no VSCode
+  - [ ] Conferir responsividade e preenchimento de todas as imagens/textos
 
 - [ ] **7. Controle de Versão**
   - [ ] Commit inicial com configurações do cliente
